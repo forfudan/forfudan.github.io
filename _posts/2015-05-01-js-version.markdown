@@ -4,10 +4,9 @@ title:      "春夜夢覺"
 subtitle:   "引簾閒遠望"
 date:       2015-05-01
 author:     "朱宇浩"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 古典诗词
-    - 诗
+    - 近体诗
 ---
 
 ​

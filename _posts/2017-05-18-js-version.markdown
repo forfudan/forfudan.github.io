@@ -4,9 +4,8 @@ title:      "鷓鴣天"
 subtitle:   "二十三宵"
 date:       2017-05-17
 author:     "朱宇浩"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 古典诗词
     - 词
 ---
 

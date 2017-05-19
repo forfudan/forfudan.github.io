@@ -4,9 +4,8 @@ title:      "浣溪沙"
 subtitle:   "隱隱長煙戀小樓"
 date:       2015-10-27
 author:     "朱宇浩"
-header-img: "img/post-bg-js-version.jpg"
+header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 古典诗词
     - 词
 ---
 
