@@ -50,9 +50,9 @@ kramdown:
 #disqus_username: _your_disqus_short_name_
 
 # Duoshuo settings
-duoshuo_username: 
+# duoshuo_username: ""
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+# duoshuo_share: false                     # set to false if you want to use Comment without Sharing
 
 
 
@@ -68,7 +68,7 @@ ga_domain:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "I live and love in God's perculiar light."
+sidebar-about-description: "PhD candidate in Finance, Erasmus University Rotterdam"
 sidebar-avatar: /img/zhuyuhao.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -82,10 +82,10 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Yuhao Zhu",
-        href: "http://zhuyuhao.com"
-    },{
         title: "Erasmus University Rotterdam",
         href: "http://www.eur.nl"
+    },{
+        title: "Tinbergen Institute",
+        href: "http://www.tinbergen.nl"
     }
 ]
