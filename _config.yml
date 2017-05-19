@@ -4,9 +4,9 @@ SEOTitle: Yuhao Zhu
 header-img: img/home-bg.jpg
 email: y.zhu@ese.eur.nl
 description: "Yuhao Zhu's Personal Website.'"
-keyword: ""
+keyword: "Finance"
 url: "http://zhuyuhao.com"              # your host, for absolute URL
-#baseurl: "/zhuyuhao"         # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
@@ -82,19 +82,10 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 # Friends
 friends: [
     {
-        title: "Hux Blog",
+        title: "Yuhao Zhu",
         href: "http://zhuyuhao.com"
     },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
+        title: "Erasmus University Rotterdam",
+        href: "http://www.eur.nl"
     }
 ]
