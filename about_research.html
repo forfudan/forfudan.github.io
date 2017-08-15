@@ -1,0 +1,85 @@
+---
+layout: page
+title: "Research"
+description: "My research and papers"
+header-img: "img/about_head_pic.jpg"
+---
+
+<!-- Language Selector -->
+<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> for English users </option>
+    <option value="1"> 中文使用者 </option>
+</select>
+
+
+<!-- Chinese Version -->
+<div class="zh post-container">
+    <hr />
+</div>
+
+
+<!-- English Version -->
+<div class="en post-container">
+    <p>
+        Here is my working papers.
+    </p>
+    <hr />
+    <p>
+        <strong>The real costs of CEO compensation - the effect of behindness aversion of employees</strong>&emsp;<a href="{{site.url}}/doc/envy_20170317.pdf">view pdf</a>
+        <br /><br />
+        Do employees who compare themselves to the CEO matter for executive compensation? Using German establishment-level wage data, we show that employee wages are increasing in CEO compensation. When CEO compensation increases 1%, the median employee’s wage increases by about 0.04%. Higher CEO compensation also increases the probability for the existence of employee stock ownership plans. We use a difference-indifference setting to provide causal evidence for the relationship. Our findings suggest that behindness aversion of employees is an important driver of wages and increases the costs of executive compensation significantly. We structurally estimate a principal-agent model with two agents (CEO, representative employee) to identify the behindness aversion parameters.
+        <br /><br />
+            - Joint work with <a target="_blank" href="https://personal.eur.nl/dittmann/">Ingolf Dittmann</a> and <a target="_blank" href="https://www.tilburguniversity.edu/webwijs/show/c.a.r.schneider/">Christoph Schneider</a>.<br />
+            - Presented at the Erasmus Finance brown bag seminar series.
+
+        <hr />
+        <strong>Wage gap and stock returns</strong>&emsp;<a href="{{site.url}}/doc/wg_paper.pdf">view pdf</a> <br /><br />
+        We propose an asset pricing model in which the optimal wage gap between managers and workers increases with managerial skills. In a world with noise traders and short-sales constraints, we show that firms with lower wage gaps should trade at a premium, and the mispricing becomes even stronger if some investors exhibit inequality aversion. Using a unique data set of German firms, we provide strong support for the model's predictions. The results suggest that pay inequality within firms has important implications for asset prices.
+        <br /><br />
+            - Joint work with <a target="_blank" href="https://personal.eur.nl/dittmann/">Ingolf Dittmann</a> and <a target="_blank" href="https://sites.google.com/site/montonemaurizio/home">Maurizio Montone</a>.<br />
+            - Presented at the IFABS Corporate Finance Conference at the University of Oxford, the Spanish Finance Association Meetings at Universitat Pompeu Fabra in Barcelona, the Behavioral Finance Working Group Conference at Queen Mary University of London, the Israel Behavioral Finance Conference at Tel Aviv University, and the Erasmus Finance brown bag seminar series.
+    </p>
+    
+</div>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    function onLanChange(index){
+        if(index == 0){
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        }else{
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+    onLanChange(0);
+</script>
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
