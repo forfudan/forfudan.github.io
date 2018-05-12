@@ -6,7 +6,7 @@ date:       2015-05-27
 author:     "朱宇浩"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 近体诗
+    - poem
 ---
 
 

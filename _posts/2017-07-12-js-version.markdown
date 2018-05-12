@@ -6,11 +6,11 @@ date:       2017-07-12
 author:     "朱宇浩"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 近体诗
+    - poem
 ---
 
 
-#集賢亭
+# 集賢亭
 20170712
 
 伏前暖氣鎖杭城，緑芷柔蝦水底生。  

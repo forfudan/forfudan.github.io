@@ -6,11 +6,11 @@ date:       2017-08-12
 author:     "朱宇浩"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 近体诗
+    - poem
 ---
 
 
-#行至海牙即賦
+# 行至海牙即賦
 20170812
 
 楊花開盡李花開，滿壟新光五色裁。  

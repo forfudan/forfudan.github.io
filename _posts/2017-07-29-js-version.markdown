@@ -6,11 +6,11 @@ date:       2017-07-29
 author:     "朱宇浩"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 词
+    - poem
 ---
 
 
-#玉樓春 有朵雲
+# 玉樓春 有朵雲
 20170729
 
 有朵雲兒真可戀，時作飛花時作燕。若將停駐細端詳，卻入高樓難覓見。
