@@ -10,11 +10,41 @@ tags:
 ---
 
 
-# 椴树蜜 / Linde Honing / Miel de tilleul 
+# 五星推荐
+### 椴树蜜 / Linde honing / Miel de tilleul 
 
-外观：乳白色，微黄色，凝脂状。    
-气味：柔和，微酸。    
-味道：爽口，清凉，有薄荷感，微甜，不腻。    
-评价：气味纯正，口感清爽，甜度适中，不冲不腻。    
+外观：乳白色，微黄色，凝脂状。<br>
+气味：柔和，微酸。<br>
+味道：爽口，清凉，有薄荷感，微甜，不腻。<br>
+评价：气味纯正，口感清爽，甜度适中，不冲不腻。<br>
+品牌：de Traay
 推荐：五星，推荐。
 <img src="{{site.url}}/img/posts/IMG_1480_Linde.JPG" alt="Linde" style="width: 400px; transform:rotate(90deg);">
+
+### 洋槐蜜 / Acacia honing / Miel d'acacia 
+
+外观：水白色至浅琥珀色，无结晶。<br>
+气味：清香，温和。<br>
+味道：香甜，无任何杂味。<br>
+评价：气味香醇，口感醇正。可以说是蜂蜜中的清水。<br>
+品牌：Picklecoombe，水白色，稠，剩下一半后开始结晶；de Traay，浅琥珀色，未结晶。<br>
+推荐：五星，推荐。
+
+# 三星推荐
+### 橙花蜜 / Sinaasappel honing / Miel d'orange biologique
+
+外观：深琥珀色，底层有少许沉淀结晶。<br>
+气味：甜腻，无杂味。<br>
+味道：酸甜，有橙味，舌根少许回苦。<br>
+评价：气味纯正，口感适宜。然特点不够突出，比较中庸。<br>
+推荐：三星，一般推荐。<br>
+时间：20180513
+
+# 一星推荐
+### 荞麦蜜 / Boekwit honing / Miel de sarrasin
+
+外观：棕色或米白色，浑浊，结晶。<br>
+气味：刺激性气味，苦，腥，有药味。<br>
+味道：味苦、腥、甜度中等，有甘草味。<br>
+评价：气味浓烈，刺激，腥苦，回味重。难以适应。<br>
+推荐：一星，不做推荐。
