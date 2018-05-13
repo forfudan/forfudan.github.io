@@ -6,7 +6,7 @@ date:       2017-07-31
 author:     "朱宇浩"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - 词
+    - Chinese poetry
 ---
 
 

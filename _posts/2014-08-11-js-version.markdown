@@ -6,7 +6,7 @@ date:       2014-08-11
 author:     "朱宇浩"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - poem
+    - Chinese poetry
 ---
 
 ​
