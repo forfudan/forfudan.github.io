@@ -18,7 +18,7 @@ tags:
 味道：爽口，清凉，有薄荷感，微甜，不腻。<br>
 评价：气味纯正，口感清爽，甜度适中，不冲不腻。<br>
 品牌：de Traay
-推荐：五星，推荐。
+推荐：五星，强烈推荐。
 <img src="{{site.url}}/img/posts/IMG_1480_Linde.JPG" alt="Linde" style="width: 400px; transform:rotate(90deg);">
 
 ### 洋槐蜜 / Acacia honing / Miel d'acacia 
@@ -26,9 +26,20 @@ tags:
 外观：水白色至浅琥珀色，无结晶。<br>
 气味：清香，温和。<br>
 味道：香甜，无任何杂味。<br>
-评价：气味香醇，口感醇正。可以说是蜂蜜中的清水。<br>
+评价：气味香醇，口感醇正。可以说是蜂蜜中的一泉清水。<br>
 品牌：Picklecoombe，水白色，稠，剩下一半后开始结晶；de Traay，浅琥珀色，未结晶。<br>
-推荐：五星，推荐。
+推荐：五星，强烈推荐。
+
+
+# 四星推荐
+### 百里香蜜 / Tijm honing
+
+外观：深琥珀色，无结晶。<br>
+气味：辛辣，腥，有花椒味。<br>
+味道：甜，清凉，有薄荷感。
+评价：味道独特，清凉。然而气味有些辛辣刺鼻。<br>
+品牌：de Traay
+推荐：四星，较为推荐。
 
 # 三星推荐
 ### 橙花蜜 / Sinaasappel honing / Miel d'orange biologique
