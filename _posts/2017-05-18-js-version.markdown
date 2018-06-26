@@ -2,8 +2,8 @@
 layout:     post
 title:      "鷓鴣天"
 subtitle:   "二十三宵"
-date:       2017-05-17
-author:     "朱宇浩"
+date:       2017-05-18
+author:     "Yuhao Zhu"
 header-img: "img/post_head_pic_js.jpg"
 tags:
     - Chinese poetry

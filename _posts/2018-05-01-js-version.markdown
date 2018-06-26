@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      "荷兰蜂蜜测评 / On Dutch Honey"
+title:      "A Review on Dutch Honey"
 subtitle:   "荷兰可见的蜂蜜品种鉴赏"
-date:       2017-08-12
-author:     "Yuhao Zhu / 朱宇浩"
+date:       2018-05-01
+author:     "Yuhao Zhu"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - article
+    - Article
 ---
 
 
