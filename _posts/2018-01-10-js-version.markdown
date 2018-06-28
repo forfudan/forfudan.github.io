@@ -6,7 +6,8 @@ date:       2018-01-10
 author:     "Yuhao Zhu"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - Programming
+    - Statistics
+    - Econometrics
     - Data Analysis
 ---
 
