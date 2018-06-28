@@ -15,7 +15,7 @@ tags:
 Guest Lecture on Basic Econometrics for Data Analysis 2018
 - Seminar "Advanced Corporate Governance: Corporate Governance"
 - Erasmus School of Economics, Erasmus University Rotterdam
-- You can find <a href="{{site.url}}/doc/posts/handout_lecture_20180110_v3" target="_blank">the handout of the lecture in PDF format here</a>.
+- You can find <a href="{{site.url}}/doc/posts/handout_lecture_20180110_v3.pdf" target="_blank">the handout of the lecture in PDF format here</a>.
 
 ## Handout information
 In this handout, you can learn two things:
