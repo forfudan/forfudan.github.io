@@ -58,7 +58,7 @@ Here, the line print("HelloWorld!") tells Python to display "HelloWorld!" on the
 
 Values and words are stored in Python with a unique name. When you are doing assignment, you tell Python the name of a certain value. Next time you refer to this name, Python will know that you will use the specific value.
 
-Assignment is done by "=" sign. Not that it is not a judgement whehter values are equal. Instead, it means that we assign a value from the right-handed side to a variable name on the left-handed side.
+Assignment is done by "=" sign. Not that it is not a judgement whether values are equal. Instead, it means that we assign a value from the right-handed side to a variable name on the left-handed side.
 
 
 ```python
@@ -68,9 +68,9 @@ name = "Yuhao"
 
 Above is an example of assignment. The first line assign an integer 1 to the variable with the name "a". The second line assign a word "Yuhao" to the variable with the name "name".
 
-It is always recommanded that you use nice names for your variables. "gender" is much better than "sdf1324dsf1" when you want to use it to stand for the gender type.
+It is always recommend that you use nice names for your variables. "gender" is much better than "sdf1324dsf1" when you want to use it to stand for the gender type.
 
-After sucessful assignment. You can print the value by calling the variable:
+After successful assignment. You can print the value by calling the variable:
 
 
 ```python
@@ -129,7 +129,7 @@ print(a ** b)
 
 The signs "+", "-", "*", "/", "**" stands for "add", "minus", "times", "divide", and "power", respectively.
 
-You can also use parentheses to make certain calcualations prior to others. Parentheses can be used in parentheses. But do never use bracket and braces! They have other roles to play in Python. For example:
+You can also use parentheses to make certain calculations prior to others. Parentheses can be used in parentheses. But do never use bracket and braces! They have other roles to play in Python. For example:
 
 
 ```python
