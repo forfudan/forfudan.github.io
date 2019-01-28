@@ -1,0 +1,17 @@
+气纯输出宏：
+/cast [nobuff:破苍穹] 破苍穹
+/cast [nobuff:气剑|bufftime:气剑<3] 万世不竭
+/cast 剑出鸿蒙
+/cast 六合独尊
+/fcast [qidian>7] 两仪化形
+/cast 四象轮回
+/cast 两仪化形
+
+气纯爆发宏：
+/fcast [qidian>8] 两仪化形
+/fcast 紫气东来
+/cast [nobuff:破苍穹] 破苍穹
+/cast [nobuff:气剑|bufftime:气剑<3] 万世不竭
+/cast 剑出鸿蒙
+/cast 六合独尊
+/cast 四象轮回

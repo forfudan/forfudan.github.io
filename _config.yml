@@ -74,6 +74,9 @@ featured-condition-size: 0             # A tag will be featured if the size of i
 # Friends
 friends: [
     {
+        title: "ABN AMRO Bank N.V.",
+        href: "https://www.abnamro.com/en/index.html"
+    },{
         title: "Erasmus University Rotterdam",
         href: "http://www.eur.nl"
     },{

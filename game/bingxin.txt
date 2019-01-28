@@ -1,0 +1,8 @@
+冰心一键宏：
+
+/fcast [buff:枕上=5|tbuff:急曲=3] 繁音急节
+/fcast [tbufftime:急曲<2|tbuff:急曲<3|tnobuff:急曲] 剑破虚空
+/cast 玳弦急曲
+/cast 剑气长江
+
+# 繁音急节可以手动放。
