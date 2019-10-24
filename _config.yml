@@ -7,7 +7,7 @@ description: "Yuhao Zhu's Personal Website.'"
 keyword: "PhD, Finance"
 url: "http://zhuyuhao.com"              # your host, for absolute URL
 baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
-plugins:
+plugins_dir:
     - jekyll-redirect-from
 
 
