@@ -39,6 +39,7 @@ gems: [jekyll-paginate]
 
 
 
+
 # Markdown settings
 # replace redcarpet to kramdown,
 # document: https://jekyllrb.com/docs/configuration/#kramdown
