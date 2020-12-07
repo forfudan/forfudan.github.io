@@ -45,8 +45,8 @@ gems: [jekyll-paginate]
 # document: https://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
+    input: GFM                            # use Github Flavored Markdown !important
+    math_engine: katex
 
 
 # Disqus settings
