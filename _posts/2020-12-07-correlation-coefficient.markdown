@@ -11,7 +11,7 @@ tags:
 
 
 # Introduction
-We know that the statistic for the Pearson correlation coefficient follows the *t*-distribution with a degree of freedom of $n-2$. That is to say that
+We know that the statistic for the Pearson correlation coefficient follows the *t*-distribution with a degree of freedom of $n-2$. That is to say that $$n-2$$.
 
 $$t=\frac{r}{\sqrt{1-r^2}}(n-2)\sim t_{n-2}.$$
 
