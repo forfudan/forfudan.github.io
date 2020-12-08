@@ -107,11 +107,13 @@ different matching mechanisms.
 There are two colleges $C=\{c_1,c_2\}$ and three students
 $S=\{s_1,s_2,s_3\}$. Each school only admits 1 student, $q=1$.
 
-The Preferences of colleges are $$\begin{aligned}
+The Preferences of colleges are 
+$$\begin{aligned}
 &P(c_1)=s_1,s_2,s_3\\
 &P(c_2)=s_3,s_1,c_2\end{aligned}$$
 
-The preferences of students are $$\begin{aligned}
+The preferences of students are 
+$$\begin{aligned}
 &P(s_1)=c_2,c_1\\
 &P(s_2)=c_1,s_2\\
 &P(s_3)=c_1,c_2\end{aligned}$$
@@ -121,12 +123,14 @@ The preferences of students are $$\begin{aligned}
 There are three colleges $C=\{c_1,c_2,c_3\}$ and three students
 $S=\{s_1,s_2,s_3\}$. Each school only admits 1 student, $q=1$.
 
-The Preferences of colleges are $$\begin{aligned}
+The Preferences of colleges are 
+$$\begin{aligned}
 &P(c_1)=s_1,s_2,s_3\\
 &P(c_2)=s_2,s_3,s_1\\
 &P(c_3)=s_3,s_1,s_2\end{aligned}$$
 
-The preferences of students are $$\begin{aligned}
+The preferences of students are 
+$$\begin{aligned}
 &P(s_1)=c_2,c_3,c_1\\
 &P(s_2)=c_3,c_1,c_2\\
 &P(s_3)=c_1,c_2,c_3\end{aligned}$$
