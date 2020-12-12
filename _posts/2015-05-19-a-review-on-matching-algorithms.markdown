@@ -39,16 +39,16 @@ School matching problem
 The school matching problem concerns two set of agents, schools
 (colleges) and students (applicants). It was initially introduced by
 [@gale1962college] as the following situation: A school (college) has
-$n$ applicants and can only accepts at most $q$. The school, after
+$n\\) applicants and can only accepts at most \\(q\\). The school, after
 evaluating the applicants, need to send out offers to some of the
 applicants. The problem is that not all applicants who receive offer
-would reply to it. Therefore, the school needs to send more than $q$
-offers to students in order to receive approximately $q$ acceptance.
+would reply to it. Therefore, the school needs to send more than \\(q$
+offers to students in order to receive approximately \\(q\\) acceptance.
 
 This procedure generate too much guesswork because the school do not
 know whether the students apply other schools, what are the preferences
 of the students, and what are the preferences of other schools.
-Therefore, the actual admission number can only be around desired $q$.
+Therefore, the actual admission number can only be around desired \\(q\\).
 
 Difficulty are not only for colleges, but for students as well. They
 need to decide whether to respond to the current offer, or to wait for a
@@ -67,22 +67,22 @@ Model description
 -----------------
 
 Here I first give a formal model of school matching problem. There are
-two groups of individuals, $m$ colleges (school) and $n$ students
-(applicants), denoted by $C=\{c_1,c_2\ldots c_m\}$ and
-$S=\{s_1,s_2\ldots,s_n\}$ respectively. School $i$ has a quota $q_i$,
-i.e., at most $q_i$ students can be accepted. It is a two-sided
+two groups of individuals, \\(m\\) colleges (school) and \\(n\\) students
+(applicants), denoted by \\(C=\{c_1,c_2\ldots c_m\}\\) and
+\\(S=\{s_1,s_2\ldots,s_n\}\\) respectively. School \\(i\\) has a quota \\(q_i\\),
+i.e., at most \\(q_i\\) students can be accepted. It is a two-sided
 matching, and, therefore, the agents of two groups do not overlap.
 Assume that the number of students is abundant enough for colleges to
-meet their quotas, i.e., $\sum^m_{i=1} q_i \leq n$.
+meet their quotas, i.e., \\(\sum^m_{i=1} q_i \leq n\\).
 
 The individuals in each side has a complete and transitive preferences
 over the individuals of the other sides. That is to say that, each
 college rank the students, while each student also rank the colleges.
-For example, the preference of college $c_1$ can be denoted as
-$P(c_1)=s_1,s_2,\ldots, s_k, c_1$. Here $c_1$ means that the college 1
+For example, the preference of college \\(c_1\\) can be denoted as
+\\(P(c_1)=s_1,s_2,\ldots, s_k, c_1\\). Here \\(c_1\\) means that the college 1
 would rather waste its quota than accept students ranked after itself.
 These unqualified students are omitted from the preference list of
-college $c_1$. Initially, we assume that the preferences are private
+college \\(c_1\\). Initially, we assume that the preferences are private
 information.[^1]
 
 For simplicity, I also assume that the preference are strict. If there
@@ -90,7 +90,7 @@ is indifference in preference, the ties can be broken arbitrarily. For
 example, if a college is indifferent between two students, he can
 randomly rank these two students.
 
-Moreover, if we set the quota $q$ equal to 1 for each college, the
+Moreover, if we set the quota \\(q\\) equal to 1 for each college, the
 students and the colleges are actually symmetric. It is a special case
 of schooling matching called “marriage model”, and it is also the
 starting point of the analysis of [@gale1962college].
@@ -104,8 +104,8 @@ different matching mechanisms.
 
 \[example1\]
 
-There are two colleges $C=\{c_1,c_2\}$ and three students
-$S=\{s_1,s_2,s_3\}$. Each school only admits 1 student, $q=1$.
+There are two colleges \\(C=\{c_1,c_2\}\\) and three students
+\\(S=\{s_1,s_2,s_3\}\\). Each school only admits 1 student, \\(q=1\\).
 
 The Preferences of colleges are 
 $$\begin{aligned}
@@ -120,8 +120,8 @@ $$\begin{aligned}
 
 \[[@gale1962college]\]\[example2\]
 
-There are three colleges $C=\{c_1,c_2,c_3\}$ and three students
-$S=\{s_1,s_2,s_3\}$. Each school only admits 1 student, $q=1$.
+There are three colleges \\(C=\{c_1,c_2,c_3\}\\) and three students
+$S=\{s_1,s_2,s_3\}\\). Each school only admits 1 student, \\(q=1\\).
 
 The Preferences of colleges are 
 $$\begin{aligned}
@@ -160,14 +160,14 @@ possibility that a pair of agents form a coalition and deviate the
 matching outcome.
 
 \[Stability [@gale1962college]\] An assignment is unstable if there are
-two students $s_1$ and $s_2$ who are assigned to colleges $c_1$ and
-$c_2$. However, $s_1$ prefers $c_2$ to $c_1$ and $c_2$ prefers $s_1$ to
-$s_2$. Then, a transfer will improve the total benefits.
+two students \\(s_1\\) and \\(s_2\\) who are assigned to colleges \\(c_1\\) and
+\\(c_2\\). However, \\(s_1\\) prefers \\(c_2\\) to \\(c_1\\) and \\(c_2\\) prefers \\(s_1\\) to
+\\(s_2\\). Then, a transfer will improve the total benefits.
 
 Stability can also be regarded as fairness, namely no justified envy
 [@kojima2010axioms]. It means that there is no case in which student
-$s_1$ is matched to $c_1$ but prefer $c_2$, but $c_2$ accepts $s_2$ who
-ranks $c_2$ lower than $s_1$ does. When matching outcome is not
+\\(s_1\\) is matched to \\(c_1\\) but prefer \\(c_2\\), but \\(c_2\\) accepts \\(s_2\\) who
+ranks \\(c_2\\) lower than \\(s_1\\) does. When matching outcome is not
 compelled among all agents, stability is also a desirable criterion to
 prevent possible coalition.
 
@@ -191,7 +191,7 @@ of Marriage”. In this paper, [@gale1962college] proposed the deferred
 acceptance mechanism for marriage matching and school matching. It
 requires all agents to state their preferences.
 
-The analysis starts from the special case when $q=1$. The algorithm has
+The analysis starts from the special case when \\(q=1\\). The algorithm has
 following steps.
 
 Step 1: Individuals of one side, say students, make proposals to his
@@ -208,7 +208,7 @@ the list, while other students are rejected.
 
 In general at
 
-Step $k$: The students who were rejected in step k-1 proposed to the
+Step \\(k\\): The students who were rejected in step \\(k-1\\) proposed to the
 last college in the preference lists. There are acceptance and
 rejection. Since a student cannot propose to the same college twice, the
 algorithm stops. The schools provides offer to the students on the
@@ -216,19 +216,19 @@ string.
 
 To see how this algorithm works, let us refer to **Example 1**. I use
 school proposing deferred acceptance algorithm here to find a match. In
-the first step, $s_1$ proposes to $c_2$, $s_2$ proposes to $c_1$, and
-$s_3$ proposes to $c_1$. $c_1$ holds $s_2$ on the string and rejects
-$s_3$, and $c_2$ holds $s_1$ on the string.
+the first step, \\(s_1\\) proposes to \\(c_2\\), \\(s_2\\) proposes to \\(c_1\\), and
+\\(s_3\\) proposes to \\(c_1\\). \\(c_1\\) holds \\(s_2\\) on the string and rejects
+\\(s_3\\), and \\(c_2\\) holds \\(s_1\\) on the string.
 
-In the second step, $s_3$ proposes to $c_2$. $c_2$ holds $s_3$ on the
-string and rejects $s_1$.
+In the second step, \\(s_3\\) proposes to \\(c_2\\). \\(c_2\\) holds \\(s_3\\) on the
+string and rejects \\(s_1\\).
 
-In the third step, $s_1$ proposes to $c_1$, and $c_1$ hold $s_1$ on the
-string while it rejects $s_2$.
+In the third step, \\(s_1\\) proposes to \\(c_1\\), and \\(c_1\\) hold \\(s_1\\) on the
+string while it rejects \\(s_2\\).
 
 The algorithm terminates, and the schools accept the students on the
 string. The final match is
-$\mu=\{(c_1,s_1),(c_2,s_3),(\emptyset,s_2)\}$.
+$\mu=\{(c_1,s_1),(c_2,s_3),(\emptyset,s_2)\}\\).
 
 Now let us move on to see whether DA algorithms features certain
 criteria.
@@ -237,11 +237,11 @@ criteria.
 Resulting outcome produced by adopting deferred acceptance algorithm is
 stable.
 
-The proof of the theorem is simple. If $c_1$ and $s_1$ are not matched,
-but $s_1$ prefer $c_1$ to her own school. Then, $s_1$ must have proposed
-to $c_1$ at some steps before and was rejected by $c_1$ because $c_1$
-prefers another student. In this way, we say the $c_1$ must prefer its
-matched student more than $s_1$. Thus, the deferred acceptance mechanism
+The proof of the theorem is simple. If \\(c_1\\) and \\(s_1\\) are not matched,
+but \\(s_1\\) prefer \\(c_1\\) to her own school. Then, \\(s_1\\) must have proposed
+to \\(c_1\\) at some steps before and was rejected by \\(c_1\\) because \\(c_1$
+prefers another student. In this way, we say the \\(c_1\\) must prefer its
+matched student more than \\(s_1\\). Thus, the deferred acceptance mechanism
 can eliminate instability.
 
 Notably, [@gale1962college] also showed that the stable matching
@@ -260,38 +260,38 @@ group of people who make a proposal. Let us see **Example 2**. There are
 three stable match:
 
 The first matching outcome results from students proposing:
-$\mu_1=\{(c_1,s_3),(c_2,s_1),(c_3,s_2)\}$.
+\\(\mu_1=\{(c_1,s_3),(c_2,s_1),(c_3,s_2)\}\\).
 
 The second matching outcome results from colleges proposing:
-$\mu_2=\{(c_1,s_1),(c_2,s_2),(c_3,s_3)\}$.
+\\(\mu_2=\{(c_1,s_1),(c_2,s_2),(c_3,s_3)\}\\).
 
 The third matching outcome is also stable:
-$\mu_3\{(c_1,s_2),(c_2,s_3),(c_3,s_1)\}$.
+\\(\mu_3\{(c_1,s_2),(c_2,s_3),(c_3,s_1)\}\\).
 
 We can see that the proposers are at least as well off under any other
-stable assignment using deferred acceptance algorithm. $\mu_1$ is
-student-optimal stable matching, and $\mu_2$ is school-optimal stable
+stable assignment using deferred acceptance algorithm. \\(\mu_1\\) is
+student-optimal stable matching, and \\(\mu_2\\) is school-optimal stable
 matching.
 
 Gale and Shapley then extend 1-to-1 matching problem to many-to-1
 matching problem, which is straightforward. Assume now the quotas of
-colleges, $q$, can be more than 1. We consider student proposing. The
+colleges, \\(q\\), can be more than 1. We consider student proposing. The
 steps are as follows:
 
-Step 1: Each students proposes to his favorite college. College $i$
-keeps the first $q_i$ applicants on the waiting (if there are less than
-$q_i$ students proposing to it, keep them all), and then rejects the
+Step 1: Each students proposes to his favorite college. College \\(i\\)
+keeps the first \\(q_i\\) applicants on the waiting (if there are less than
+\\(q_i\\) students proposing to it, keep them all), and then rejects the
 others.
 
 Step 2: The students who were rejected in the step 1 can now propose to
 their second favorite school. After receiving the new proposals, the
-college $c_i$ chooses the favorite $q_i$ student from those who proposes
+college \\(c_i\\) chooses the favorite \\(q_i\\) student from those who proposes
 in step 2 and the student on the waiting list from step 1. These student
 will be on the waiting list, while other students are rejected.
 
 In general at
 
-Step $k$: The students who were rejected in step $k-1$ proposed to the
+Step \\(k$: The students who were rejected in step \\(k-1\\) proposed to the
 last college in the preference lists. There are acceptance and
 rejection. Since a student cannot propose to the same college twice, the
 algorithm stops. The schools provides offer to the students on the
@@ -309,9 +309,9 @@ This theorem indicates that no matching procedure can generate both
 stable outcome and incentive compatible outcome. It directly means that
 deferred acceptance algorithm is not strategy-proof. See **Example 2**
 and consider students proposing. If, say, college 1 truncates its
-preference by reporting $P'(c_1)=s_1$. After 7 steps of iteration, the
+preference by reporting \\(P'(c_1)=s_1\\). After 7 steps of iteration, the
 student-optimal stable matching under reported preferences is
-$\mu'_S=\{(c_1,s_1),(c_2,s_2),(c_3,s_3)\}$. The colleges are strictly
+\\(\mu'_S=\{(c_1,s_1),(c_2,s_2),(c_3,s_3)\}\\). The colleges are strictly
 better off by reporting fake preferences.
 
 However, literature showed that truth-telling can still be dominant
@@ -332,19 +332,19 @@ agents.
 Literature also examined the another criterion, namely Pareto
 efficiency.
 
-\[Weakly Pareto efficiency[@roth2008deferred]\] A matching $\mu$ is
+\[Weakly Pareto efficiency[@roth2008deferred]\] A matching \\(\mu\\) is
 weakly pareto efficient for all students if there is no matching,
-including unstable ones, that all students strictly prefer it to $\mu$.
+including unstable ones, that all students strictly prefer it to \\(\mu\\).
 
 \[[@roth1982economics]\] The student-optimal matching is weakly Pareto
 optimal for all students. However, it is not strongly Pareto optimal for
 all students.
 
 Return to **Example 1**. The stable matching
-$\mu=\{(c_1,s_1),(c_2,s_3),(\emptyset,s_2)\}$ is dominated by an
-unstable matching $\mu'=\{(c_1,s_3),(c_2,s_1),(\emptyset,s_2)\}$ from
-the perspective of student side even though $\mu'$ is not stable, since
-$s_1$ and $s_3$ achieved their first choices while $s_2$ was not worse
+$\mu=\{(c_1,s_1),(c_2,s_3),(\emptyset,s_2)\}\\) is dominated by an
+unstable matching \\(\mu'=\{(c_1,s_3),(c_2,s_1),(\emptyset,s_2)\}\\) from
+the perspective of student side even though \\(\mu'\\) is not stable, since
+\\(s_1\\) and \\(s_3\\) achieved their first choices while \\(s_2\\) was not worse
 off.
 
 Boston mechanism
@@ -366,7 +366,7 @@ Step 2: Those who are rejected in the step 1 proposes to the school they
 list as their second choice. Each school accepts its applicants
 according to its preference until the remaining quota is fully used.
 
-In general at Step $k$: Those who are rejected in the step $k-1$
+In general at Step \\(k\\): Those who are rejected in the step \\(k-1\\)
 proposes to the school they list as their (k-1)th choice. Each school
 accepts its applicants according to its preference until the remaining
 quota is fully used.
@@ -380,17 +380,17 @@ waiting lists, i.e., proposers in this step will not be compared to
 students in the waiting lists of last step.
 
 See **Example 1**. There is only one step before matching is done if
-Boston mechanism is adopted. In this step, $s_1$ proposes to $c_2$,
-$s_2$ and $s_3$ proposes to $c_1$. Only $s_3$ is rejected. The resulting
-matching is $\mu=\{(c_1,s_2),(c_2,s_1),(\emptyset,s_3)\}$
+Boston mechanism is adopted. In this step, \\(s_1\\) proposes to \\(c_2\\),
+\\(s_2\\) and \\(s_3\\) proposes to \\(c_1\\). Only \\(s_3\\) is rejected. The resulting
+matching is \\(\mu=\{(c_1,s_2),(c_2,s_1),(\emptyset,s_3)\}$
 
 This mechanism has following properties.
 
 \[[@abdulkadiroglu2003school]\] Boston mechanism is not strategy-proof.
 
-It is easy to see from **Example 1** that even if student $s_3$ ranked
-first in school $c_2$, she might still lose priority if he does not list
-school $c_2$ as her first choice. Thus, students and their parents might
+It is easy to see from **Example 1** that even if student \\(s_3\\) ranked
+first in school \\(c_2\\), she might still lose priority if he does not list
+school \\(c_2\\) as her first choice. Thus, students and their parents might
 fake their true preferences, and improve the ranking of schools that
 give them high priority.
 
@@ -415,9 +415,9 @@ schools with the following algorithm.
 
 Step 1: Each student points to its announced favorite school, and each
 school points to its announced favorite student. This will generate at
-least a cycle. For example, $(s_1,c_1,s_2,c_3,\ldots,c_k)$, in which
-student $s_1$ points to college $c_1$, $c_1$ points to student $s_2$,
-and so on, until $c_k$ points to $s_1$. Every student in the cycle is
+least a cycle. For example, \\((s_1,c_1,s_2,c_3,\ldots,c_k)\\), in which
+student \\(s_1\\) points to college \\(c_1\\), \\(c_1\\) points to student \\(s_2\\),
+and so on, until \\(c_k\\) points to \\(s_1\\). Every student in the cycle is
 assigned to the school she points to.
 
 In general at Step k: The rest students and colleges with quota continue
@@ -426,11 +426,11 @@ points to.
 
 The algorithm stops when no cycle can be formed.
 
-Considering **Example 1**, in step 1, $s_1$ points to $c_2$, $c_2$
-points to $s_3$, $s_3$ points to $c_1$, and $c_1$ points to $s_1$. There
-is a cycle and then $s_1$ is assigned to $c_2$ and $s_3$ is assigned to
-$c_1$. The resulting matching is
-$\mu=\{(c_1,s_3),(c_2,s_1),(\emptyset,s_2)\}$.
+Considering **Example 1**, in step 1, \\(s_1\\) points to \\(c_2\\), \\(c_2\\)
+points to \\(s_3\\), \\(s_3\\) points to \\(c_1\\), and \\(c_1\\) points to \\(s_1\\). There
+is a cycle and then \\(s_1\\) is assigned to \\(c_2\\) and \\(s_3\\) is assigned to
+\\(c_1\\). The resulting matching is
+\\(\mu=\{(c_1,s_3),(c_2,s_1),(\emptyset,s_2)\}\\).
 
 The top trading cycles mechanism has some different properties from
 deferred acceptance mechanism. These properties can also be seen from
