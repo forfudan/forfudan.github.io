@@ -7,6 +7,7 @@ author:     "Yuhao Zhu"
 header-img: "img/post_head_pic_js.jpg"
 tags:
     - Programming
+    - Python
 ---
 
 

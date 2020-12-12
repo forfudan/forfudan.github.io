@@ -1,0 +1,371 @@
+---
+layout:     post
+title:      "手把手教你画数据地图之入门篇"
+subtitle:   "Python数据地图"
+date:       2020-04-05
+author:     "Yuhao Zhu"
+header-img: "img/post_head_pic_js.jpg"
+tags:
+    - Programming
+    - Python
+---
+
+<h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#手把手教你画数据地图之入门篇" data-toc-modified-id="手把手教你画数据地图之入门篇-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>手把手教你画数据地图之入门篇</a></span><ul class="toc-item"><li><span><a href="#最近有很多小可爱问：" data-toc-modified-id="最近有很多小可爱问：-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>最近有很多小可爱问：</a></span></li><li><span><a href="#代码" data-toc-modified-id="代码-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>代码</a></span></li><li><span><a href="#数据地图" data-toc-modified-id="数据地图-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>数据地图</a></span></li><li><span><a href="#安装必须工具" data-toc-modified-id="安装必须工具-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>安装必须工具</a></span></li><li><span><a href="#开始编程" data-toc-modified-id="开始编程-1.5"><span class="toc-item-num">1.5&nbsp;&nbsp;</span>开始编程</a></span></li><li><span><a href="#引入模块" data-toc-modified-id="引入模块-1.6"><span class="toc-item-num">1.6&nbsp;&nbsp;</span>引入模块</a></span></li><li><span><a href="#导入内置世界地图" data-toc-modified-id="导入内置世界地图-1.7"><span class="toc-item-num">1.7&nbsp;&nbsp;</span>导入内置世界地图</a></span></li><li><span><a href="#添加国家的数值" data-toc-modified-id="添加国家的数值-1.8"><span class="toc-item-num">1.8&nbsp;&nbsp;</span>添加国家的数值</a></span></li><li><span><a href="#合并地图和数值" data-toc-modified-id="合并地图和数值-1.9"><span class="toc-item-num">1.9&nbsp;&nbsp;</span>合并地图和数值</a></span></li><li><span><a href="#绘制地图" data-toc-modified-id="绘制地图-1.10"><span class="toc-item-num">1.10&nbsp;&nbsp;</span>绘制地图</a></span></li><li><span><a href="#进阶地图修饰" data-toc-modified-id="进阶地图修饰-1.11"><span class="toc-item-num">1.11&nbsp;&nbsp;</span>进阶地图修饰</a></span></li><li><span><a href="#结束语" data-toc-modified-id="结束语-1.12"><span class="toc-item-num">1.12&nbsp;&nbsp;</span>结束语</a></span></li></ul></li></ul></div>
+
+Jupyter notebook at   
+https://github.com/forFudan/DataMaps
+
+# 手把手教你画数据地图之入门篇
+
+## 最近有很多小可爱问：
+
+朱老师你的疫情地图是怎么画粗出来哒？！”
+
+短答案是“用 Python画的”。长答案的话……似乎太长了。想来想去，要不就手把手从零开始教你画一幅数据地图吧 ><
+
+## 代码
+
+本文中的 Python 代码可以在我的 Github 仓库里找到：
+https://github.com/forFudan/DataMaps/tree/master/
+
+## 数据地图
+所谓数据地图，其实就是把数据用颜色的不同或者深浅，按照不同的区域反映在地图上。英文名叫 Choropleth。画一幅数据地图，我们其实需要画3个要素：
+
+区域的形状。也就是说我们要把不同的区域（或者国家、城市）区分开来，然后画出他们的边界。这一点比较简单，只要导入地图后用一个命令即可完成。
+
+区域的颜色。也就是说我们要把一个区域的数字（特性）用不同的颜色或者深浅来反映出来。为了这一点，我们首先需要给每个区域一个数字，然后我们需要判断数字和颜色之间的关系，最后我们把颜色画到区域上。
+
+图例和备注。只看到颜色，并不能让读者知道这个地区的数字的准确大小。所以，我们需要在图上加一些图例来告知读者颜色和数字的关系。
+
+## 安装必须工具
+古人云：“工欲善其事必先利其器”。你得先有个合适的工具。目前能实现数据地图的工具挺多的，比如 ArcGIS JavaScript R 等。不过朱老师是一个 Pythoner，所以这里我们用 Python 来画图。
+
+安装 Python 的方法千千万，我比较推荐的是 Anaconda。它自身集成了很多的优秀的第三方的库。https://www.anaconda.com/distribution/
+
+具体安装过程略（其实就是不断按下一步）。有机会我可以补上。
+
+安装好了 Python，大家需要安装一个非常重要的工具，也就是数据地图的主角。那就是 geopandas。（说明文档在此：https://geopandas.org)
+
+具体安装方法就是，打开你的命令提示符（Windows 叫CMD, Powershell,  Mac 下叫 terminal)，输入以下命令:
+
+```
+conda install geopandas
+```
+
+然后一路按 yes 即可。
+
+此外，我们还需要安装 descartes 这个包。
+
+```
+conda install descartes
+```
+
+## 开始编程
+这里我比较推荐使用有交互模式的编辑器来写程序。它的好处是可以及时看到图片的效果。比如：
+
+Jupyter Notebook
+
+安装了 Python 插件的 VSCode
+
+Spyder
+
+## 引入模块
+我们在程序的最上方引入需要的模块，也就是 GeoPandas 和 Pandas。（为了教学方便，我这里引用的是最主要的必不可少的模块。大家可以根据需求引入其他的模块。）
+
+
+```python
+import geopandas as gpd
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+## 导入内置世界地图
+
+GeoPandas 这个包的最好的地方在于，它自带一副世界地图。所以我们并不需要依赖其他的地图文件。对于初学者十分友善。
+
+
+```python
+world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+```
+
+
+```python
+world = world[world.continent != 'Antarctica']
+```
+
+这样，我们就读取了除去了南极洲的世界地图，并且存到了 world 这个对象里。这个 world 其实是一个表格，它有一列 name 是国家的名字，一列 geometry 是用来表达这个国家在地图上的形状的一串经纬度的列表。
+
+在地图数据中，任何国家的形状都是由很多很多点围起来的，他们保存在这个叫 geometry 的列中。以后我们遇到了其他的地图数据文件 (Shapefile, .shp)，国家的形状也是存在这一列中的。
+
+我们可以让 Python 根据 geometry 这一列的数据来绘制国家的形状。如果想看到及时看到目前的地图，只要输入：
+
+
+```python
+world.plot()
+```
+
+![png](/img/posts/data_map_1/output_13_1.png)
+
+
+交互视窗就会返回这样的一个世界地图。其实计算机把各个区域的形状绘制了出来，并且加上了醒目的边界。
+
+看起来似乎中国被挤压得很厉害。我们换一种投影方式可能会比较好：
+
+
+```python
+world = world.to_crs("EPSG:3395")
+world.plot()
+```
+
+![png](/img/posts/data_map_1/output_15_1.png)
+
+
+我们得到了新的地图。这个投影方式看起来舒服多了。
+
+## 添加国家的数值
+
+我们来看看这个地图里有哪些国家和地区吧！输入：
+
+
+```python
+np.unique(world.name)
+```
+
+
+
+
+    array(['Afghanistan', 'Albania', 'Algeria', 'Angola', 'Argentina',
+           'Armenia', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas',
+           'Bangladesh', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan',
+           'Bolivia', 'Bosnia and Herz.', 'Botswana', 'Brazil', 'Brunei',
+           'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon',
+           'Canada', 'Central African Rep.', 'Chad', 'Chile', 'China',
+           'Colombia', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus',
+           'Czechia', "Côte d'Ivoire", 'Dem. Rep. Congo', 'Denmark',
+           'Djibouti', 'Dominican Rep.', 'Ecuador', 'Egypt', 'El Salvador',
+           'Eq. Guinea', 'Eritrea', 'Estonia', 'Ethiopia', 'Falkland Is.',
+           'Fiji', 'Finland', 'Fr. S. Antarctic Lands', 'France', 'Gabon',
+           'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Greenland',
+           'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana', 'Haiti',
+           'Honduras', 'Hungary', 'Iceland', 'India', 'Indonesia', 'Iran',
+           'Iraq', 'Ireland', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jordan',
+           'Kazakhstan', 'Kenya', 'Kosovo', 'Kuwait', 'Kyrgyzstan', 'Laos',
+           'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Lithuania',
+           'Luxembourg', 'Macedonia', 'Madagascar', 'Malawi', 'Malaysia',
+           'Mali', 'Mauritania', 'Mexico', 'Moldova', 'Mongolia',
+           'Montenegro', 'Morocco', 'Mozambique', 'Myanmar', 'N. Cyprus',
+           'Namibia', 'Nepal', 'Netherlands', 'New Caledonia', 'New Zealand',
+           'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'Norway', 'Oman',
+           'Pakistan', 'Palestine', 'Panama', 'Papua New Guinea', 'Paraguay',
+           'Peru', 'Philippines', 'Poland', 'Portugal', 'Puerto Rico',
+           'Qatar', 'Romania', 'Russia', 'Rwanda', 'S. Sudan', 'Saudi Arabia',
+           'Senegal', 'Serbia', 'Sierra Leone', 'Slovakia', 'Slovenia',
+           'Solomon Is.', 'Somalia', 'Somaliland', 'South Africa',
+           'South Korea', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden',
+           'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania',
+           'Thailand', 'Timor-Leste', 'Togo', 'Trinidad and Tobago',
+           'Tunisia', 'Turkey', 'Turkmenistan', 'Uganda', 'Ukraine',
+           'United Arab Emirates', 'United Kingdom',
+           'United States of America', 'Uruguay', 'Uzbekistan', 'Vanuatu',
+           'Venezuela', 'Vietnam', 'W. Sahara', 'Yemen', 'Zambia', 'Zimbabwe',
+           'eSwatini'], dtype=object)
+
+
+
+你会得到地图里面所有国家和地区的列表。（朱老师在这里一般会做一些细节处理，比如调整这幅图里错误的台湾地区和藏南地区。朱老师非常根正苗红政治正确的！）。
+
+我们接下来就要给每个国家一个数字，这样才能把数据最终反馈到地图上不同的颜色。这里便于举例，我使用部分截至2020年3月30日的世界新冠肺炎疫情各国家和地区的确诊病例数。这里选取的国家都是病例数靠前并且在图上面积比较大的国家便于显示。将这些数值存入一个 DataFrame 里。
+
+
+```python
+country_number = {'United States of America': 144060,
+                  'Italy': 97689,
+                  'Spain': 85199,
+                  'China': 81470,
+                  'Taiwan': 81470,
+                  'Germany': 63929,
+                  'Iran': 41495,
+                  'France': 40174,
+                  'United Kingdom': 22141,
+                  'Switzerland': 15668,
+                  'Belgium': 11899,
+                  'Netherlands': 11750,
+                  'South Korea': 9661,
+                  'Canada': 6671,
+                  'Norway': 4436,
+                  'Brazil': 4330,
+                  'Australia': 4247,
+                  'Sweden': 4106,
+                  'Japan': 1866,
+                  'Russia': 1836,
+                  }
+
+df_country_number = pd.DataFrame(
+    country_number.items(), columns=['name', 'number'])
+```
+
+这样，我们就得到了一个 DataFrame 表格，里面有两列，一列是国家名 name，另一列是确诊病例数字 number。
+
+## 合并地图和数值
+
+接下来我们将地图和数值根据国家名合并起来。
+
+
+```python
+world = pd.merge(world, df_country_number, on='name', how='left')
+```
+
+这段代码的意思是：我们将世界地图（国家名——形状数据）这个表格，和国家数据（国家名——病例数字）根据相同的国家名合并在一起。如果一个国家没有数据，那么这个国家依然留在表格中，但是 number 这一栏是空值。我们用0来代替这些空值并把这些数强制定义为整数。
+
+
+```python
+world['number'] = world['number'].fillna(0).astype('int')
+```
+
+好啦，这下，每个在地图数据中的国家，都有一个数值了。如果没有数据，那么数据就是空的。
+
+## 绘制地图
+
+数据处理完毕，我们可以开始绘制地图了。回到最开始的部分，画一幅数据地图，我们需要画3个要素：
+- 区域的形状。
+- 区域的颜色。
+- 图例和备注。
+
+好在，GeoPandas足够强大，让我们可以一个命令将这些要素全部画进去。
+
+首先，我们新建一个空白的图像和画布用来画图。以下命令定义了这块画布的长宽和清晰度。
+
+
+```python
+fig, ax = plt.subplots(figsize=(15, 10), dpi=200)
+```
+
+
+![png](/img/posts/data_map_1/output_28_0.png)
+
+
+这块画布就叫做 ax。我们将要在它上面画出地图。输入以下命令：
+
+这个命令的意思是，对于 world 这个表格，我们在ax这个画布上画出：
+- 区域的形状，国家的边界用0.2粗细的灰色线表示。
+- 区域的颜色：根据 number 这一列的数字来画图，图的颜色是红色。
+- 图例和备注：legend=True 显示一个颜色柱来表示数值和颜色深浅的对应关系。 
+
+我们会得到这样一幅图。
+
+
+```python
+world.plot(ax=ax,
+           linewidth=0.2, edgecolor='gray',
+           column='number', cmap='Reds',
+           legend=True)
+
+fig
+```
+
+
+
+
+![png](/img/posts/data_map_1/output_30_0.png)
+
+
+
+
+    <Figure size 432x288 with 0 Axes>
+
+
+很好，一副数据地图最基本的特征都有啦。我们接下来做一些修饰。比如去掉坐标轴，加上个标题等等。
+
+
+```python
+fig, ax = plt.subplots(figsize=(15, 10), dpi=200)
+world.plot(ax=ax,
+           linewidth=0.2, edgecolor='gray',
+           column='number', cmap='Reds',
+           legend=True)
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.get_xaxis().set_ticks([])
+ax.get_yaxis().set_ticks([])
+
+ax.set_title(
+    'Confirmed cases of COVID-19 per selected country (20200330)', size=20)
+```
+
+
+
+
+    Text(0.5, 1.0, 'Confirmed cases of COVID-19 per selected country (20200330)')
+
+
+
+
+![png](/img/posts/data_map_1/output_32_1.png)
+
+
+## 进阶地图修饰
+
+地图画到这里，我们已经从零开始学会了画一幅基本的数据地图。这已经可以让你应付很多你想要实现的可视化需求。当然，每一个数据地图都是独一无二的，都有一些不一样的特征，需要我们根据需求加以修饰。
+
+比如，刚刚这幅地图中，还有一些值得提升的地方：
+
+地图的区分度不够。因为有些国家的数字太高，导致了线性的“刻度——颜色”的关系无法把一些数字较小的国家区别开来。可能对于疫情地图来说，用对数刻度会更加有表现力。
+
+这里的图例特别长，显得和左边的地图不协调，我们可以对它进行调整。
+
+这里，我们用一些其他的命令就这幅地图进行调整。可以得到一张更加美观的地图。
+
+
+```python
+from mpl_toolkits.axes_grid1 import make_axes_locatable
+
+variable = 'number'
+mapcolor = 'Reds'
+```
+
+
+```python
+fig, ax = plt.subplots(figsize=(15, 10), dpi=200)
+world.plot(column=variable, cmap=mapcolor,
+         linewidth=0.2, edgecolor='gray', ax=ax,
+         scheme='user_defined', classification_kwds={'bins': [0, 10, 100, 1000, 10000, 100000]})
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.get_xaxis().set_ticks([])
+ax.get_yaxis().set_ticks([])
+
+ax.set_title(
+    'Confirmed cases of COVID-19 per selected country (20200330)', size=24)
+
+divider = make_axes_locatable(ax)
+cax = divider.append_axes("right", size="5%", pad=0.2)
+sm = plt.cm.ScalarMappable(cmap=mapcolor)
+cbar = fig.colorbar(sm, cax=cax)
+bins = [0, 10, 100, 1000, 10000, 100000]
+_ = cbar.ax.set_yticklabels(bins)
+```
+
+    C:\Users\ZHU\Anaconda3\lib\site-packages\ipykernel_launcher.py:21: UserWarning: FixedFormatter should only be used together with FixedLocator
+    
+
+
+![png](/img/posts/data_map_1/output_35_1.png)
+
+
+图中，病例数只有一千多的日本和俄罗斯，在对数尺度下，颜色就加深了，可以更好地同其他的数量更小的国家相区分。同时，右侧的刻度栏也缩小了长度，跟左侧的地图更加和谐。
+
+## 结束语
+
+考虑到这篇文章是朱老师手把手带你入坑门数据地图，就不在一些比较风骚复杂的命令上过多展开了。这些进阶的技巧，大家可以不断在实战和阅读官方文档中学习提升。朱老师接下来也会不定期推出“手把手教你用Python画数据地图之进阶篇”。
+
+怎么样，想不想亲自动手试一试？如果有任何意见、建议、问题，都欢迎来跟我交流哦！我也很欢迎大家跟我分享你们画出的数据地图。
+
+那么谢谢大家的阅读，我们下次再见！
