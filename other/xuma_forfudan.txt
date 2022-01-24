@@ -13402,7 +13402,7 @@ bzzz 辽阔
 bzzz 阴谋诡计
 bzzz 陈词滥调
 bzzz 陆海潘江
-c 她
+c 以
 c 如果
 c 以为
 c Ⓒ
@@ -13608,7 +13608,9 @@ cazj 驾驶证者
 cazk 奶油
 cazr 少壯派
 cazx 经验谈
-cb 好
+cb 她
+cb 她们
+cb 她的
 cba 绿
 cbaa 好幾
 cbac 妇幼
@@ -21920,7 +21922,7 @@ cvzu 经贸混委会
 cvzy 女流
 cvzy 终济
 cvzz 加入门派
-cw 以
+cw 娘
 cwa 嫏
 cwaa 绽出
 cwab 嫏
@@ -21930,7 +21932,7 @@ cwas 缩水
 cwau 嫁給
 cwaw 以及
 cway 嬤
-cwb 娘
+cwb 嫝
 cwba 嫝
 cwbb 约定书
 cwbg 娘
@@ -46249,7 +46251,7 @@ ezzz 云谲波诡
 ezzz 无论海角与天涯
 ezzz 要闻评论
 ezzz 专门词汇
-f 把
+f 大
 f 或者
 f 大概
 f Ⓕ
@@ -48306,7 +48308,7 @@ fczy 车房
 fczy 连续流
 fczy 东流
 fczy 东游
-fd 轻
+fd 把
 fd 大
 fda 握
 fdaa 掘
@@ -48839,6 +48841,7 @@ fdhw 大蓉
 fdhx 轻盔
 fdhy 大荒
 fdhz 轻薄
+fdi 轻
 fdia 排尿功能
 fdib 大杨
 fdib 大根
@@ -136088,7 +136091,7 @@ mzzt 置之河之干兮
 mzzv 贼溜溜
 mzzv 黑溜溜
 mzzz 财源滚滚
-n 回
+n 当
 n 因为
 n 当然
 n Ⓝ
@@ -139953,7 +139956,7 @@ nnzm 骷髅洞
 nnzq 睡睡觉
 nnzz 圆圆满满
 nnzz 光光滑滑
-no 圆
+no 回
 no の
 no ノ
 noad 回絕
@@ -140152,6 +140155,7 @@ nolo 圆点
 nols 圖上
 nolw 眼中战国成争鹿
 nolx 圆业
+nom 圆
 nomf 党中央
 nomf 团中央
 nomf 團中央
@@ -186423,7 +186427,7 @@ szzx 行波说
 szzz 肤浅认识
 t 他
 t 他们
-t 们
+t 自己
 t Ⓣ
 t ⓣ
 t ⒯
@@ -199984,10 +199988,10 @@ tzdh 進展
 tzdi 自已
 tzdi 欲为圣明除弊事
 tzdi 自导
-tzdj 自己
 tzdj 自居
 tzdj 欲海难填
 tzdj 偏己
+tzdj 自己
 tzdo 自强
 tzdp 川渚屡径复
 tzds 自通
