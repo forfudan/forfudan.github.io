@@ -13402,7 +13402,7 @@ bzzz 辽阔
 bzzz 阴谋诡计
 bzzz 陈词滥调
 bzzz 陆海潘江
-c 以
+c 她
 c 如果
 c 以为
 c Ⓒ
@@ -13608,9 +13608,7 @@ cazj 驾驶证者
 cazk 奶油
 cazr 少壯派
 cazx 经验谈
-cb 她
-cb 她们
-cb 她的
+cb 好
 cba 绿
 cbaa 好幾
 cbac 妇幼
@@ -21922,7 +21920,7 @@ cvzu 经贸混委会
 cvzy 女流
 cvzy 终济
 cvzz 加入门派
-cw 娘
+cw 以
 cwa 嫏
 cwaa 绽出
 cwab 嫏
@@ -21932,7 +21930,7 @@ cwas 缩水
 cwau 嫁給
 cwaw 以及
 cway 嬤
-cwb 嫝
+cwb 娘
 cwba 嫝
 cwbb 约定书
 cwbg 娘
