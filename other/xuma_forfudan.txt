@@ -9813,7 +9813,6 @@ bkzq 陨星学
 bkzs 阳沟
 bkzt 即时消息
 bkzy 阿曼湾
-bl 蛋
 bl 了
 bla 疏
 blaa 了斷
@@ -9898,7 +9897,7 @@ blki 疏果
 blks 蛋鸭
 blku 书业界
 blkv 疏略
-bll 蟊
+bll 蛋
 bllm 蟊
 bllo 子点点
 blls 书桌上
