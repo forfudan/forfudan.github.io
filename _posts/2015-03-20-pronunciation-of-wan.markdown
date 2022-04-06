@@ -6,7 +6,7 @@ date:       2015-03-20
 author:     "Yuhao Zhu"
 header-img: "img/post_head_pic_js.jpg"
 tags:
-    - Zhihu.com
+    - 知乎回答
 ---
 
 具體解釋一下這個現象。
