@@ -1,6 +1,6 @@
 # Site settings
-title: 朱宇浩 · Yuhao Zhu
-SEOTitle: Yuhao Zhu, Ph.D.
+title: Yuhao Zhu
+SEOTitle: Yuhao Zhu
 header-img: img/home_head_pic.jpg
 email: y.zhu@ese.eur.nl
 description: "Yuhao Zhu's Personal Website.'"
@@ -14,11 +14,8 @@ plugins: [jekyll-paginate]
 
 # SNS settings
 RSS: false
-#weibo_username:     zhuyuhao911018
 zhihu_username:     zhuyuhao
 github_username:    forFudan
-#twitter_username:  zhuyuhao
-#facebook_username:  zhuyuhao911018
 linkedin_username:  zhuyuhao1991
 eur_username:       yuhao-zhu
 
@@ -62,7 +59,7 @@ ga_domain:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Model Validator at ABN AMRO Bank, PhD of Finance"
+sidebar-about-description: "朱宇浩, Model Validator at ABN AMRO Bank, PhD of Finance"
 sidebar-avatar: /img/zhuyuhao.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
