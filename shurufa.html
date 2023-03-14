@@ -1,0 +1,350 @@
+---
+title: 宇浩輸入法
+layout: page
+description: About Yuhao Input Method
+header-img: "img/tag_head_pic.jpg"
+---
+
+<blockquote>
+    <a target="_blank" href="{{site.url}}/yuhao"></p>點擊此處深入瞭解和學習宇浩繁簡通打輸入法。</a>
+    <br>官方QQ群：735728797
+</blockquote>
+
+
+<p>
+    我在2023年發明了一款依照字形進行輸入的形碼輸入法（類似於五筆字形和鄭碼）。它具有低重码、繁簡通、大字集的特點，囊括了至 CJK-H 區的九萬多個漢字和部首。</p>
+<p>發明這款輸入法的過程中，我借鑑了很多其他優秀輸入法的特點，尤其是徐碼對我的影響很大。我嘗試繼承它的繁簡通打優勢，同時繼承了五筆字型分區排列字根的優點。揚各家之長，補各家之短，成就了平衡感極佳的宇浩輸入法。我將它適配於Rime系統。在此推薦給为選字而發愁的你。
+
+<p>「宇浩繁简通输入法」具有以下特点：</p>
+<ul>
+    <li>面向大字集，全面覆盖CJK全字集98000多个汉字和部首。</li>
+    <li>常用繁简字通打混输。GB2312 + 国字常用字 +
+        大陆繁体字集下，静态重码率和动态选重率很低。同时，相似字形归并，达到打字派和检字派的平衡。</li>
+    <li>只使用25键，不使用Z键，手感好。Z鍵用於反查或其它自定義功能。</li>
+    <li>按顺序拆字，取一、二、三、未字根。</li>
+    <li>双编码，不分主副根，没有结构码。</li>
+    <li>全简一致，简码和词语编码取根同单字一致。</li>
+    <li>字根大码的排布按照键盘分区，字根小码使用拼音中的字母，便於上手。</li>
+    <li>基于<strong>实用主义</strong>原则，对相似字根进行合并，如「二」「冫」「飞右两点」不区分，「日」「曰」不区分。</li>
+    <li>最高频的汉字一简位于最容易按的键上：<code>E的</code>、<code>F一</code>、<code>V了</code>、<code>I没</code>。</li>
+</ul>
+<p><a href="https://zhuyuhao.com/yuhao/chaifen">点击这里进入宇浩输入法在线拆分查询系统。</a></p>
+<p>这里对比一下五笔、郑码、徐码、虎码（都是我比较喜欢、有亮点的输入法）在不同汉字字符集下的单字全码的重码数量，以供参考。加粗的数字代表本行最优值。排名按发明时间顺序：</p>
+<table>
+    <colgroup>
+        <col style="width: 12%" />
+        <col style="width: 10%" />
+        <col style="width: 10%" />
+        <col style="width: 12%" />
+        <col style="width: 12%" />
+        <col style="width: 18%" />
+        <col style="width: 21%" />
+    </colgroup>
+    <thead>
+        <tr class="header">
+            <th>形码方案</th>
+            <th>GB2312</th>
+            <th>国字</th>
+            <th>常用繁简</th>
+            <th>GBK</th>
+            <th>GB2312选重率</th>
+            <th>常用繁简选重率</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="odd">
+            <td>五笔86</td>
+            <td>537</td>
+            <td>357</td>
+            <td>1741</td>
+            <td>6582</td>
+            <td>0.34%</td>
+            <td>2.74%</td>
+        </tr>
+        <tr class="even">
+            <td>郑码</td>
+            <td>563</td>
+            <td>311</td>
+            <td>1809</td>
+            <td>6590</td>
+            <td>0.59%</td>
+            <td>2.92%</td>
+        </tr>
+        <tr class="odd">
+            <td>五笔98</td>
+            <td>515</td>
+            <td>329</td>
+            <td>1679</td>
+            <td>6368</td>
+            <td>0.38%</td>
+            <td>2.77%</td>
+        </tr>
+        <tr class="even">
+            <td>徐码</td>
+            <td>318</td>
+            <td><strong>127</strong></td>
+            <td><strong>488</strong></td>
+            <td><strong>2902</strong></td>
+            <td>0.11%</td>
+            <td>0.15%</td>
+        </tr>
+        <tr class="odd">
+            <td>虎码</td>
+            <td>532</td>
+            <td>238</td>
+            <td>2076</td>
+            <td>7687</td>
+            <td><strong>0.05%</strong></td>
+            <td>4.00%</td>
+        </tr>
+        <tr class="even">
+            <td>宇浩</td>
+            <td><strong>309</strong></td>
+            <td>216</td>
+            <td>614</td>
+            <td>4966</td>
+            <td><strong>0.05%</strong></td>
+            <td><strong>0.14%</strong></td>
+        </tr>
+    </tbody>
+</table>
+<p>输入法有优点就有缺点，但我努力做到扬长避短。这里总结一下「宇浩输入法」对若干痛点的解决方法是：</p>
+<ul>
+    <li>宇浩输入法使用了和五笔一样的分键盘区域随机排布字根的方式。横区在键盘中排左侧，竖区在键盘中下排右侧，撇区在键盘上排左侧，捺区在键盘上排右侧，折区在键盘下排左侧。字根较为随机，这个考量是为了降重，同时不增加规则的复杂度。实际使用的时候，字根可以短时间内熟练，但规则的复杂度带来的痛苦是长久的。分区域分布，这是为了降低使用者上手的困难度。
+    </li>
+    <li>宇浩输入法部分借鉴了徐码的首根小码后置（回头码）的特点，但徐码的副根字无论在任何情况下都要回头，这等同于在输入单字的时候一直判断取三根还是四根，容易出错。宇浩输入法只有在编码不足四码（双根字）的情况下才需要补上首根小码。
+    </li>
+    <li>宇浩输入法使用了和五笔一样取一二三末根。而不是郑码和徐码那样，有时候取一、二、次末、末，有时候取一二末。这样选择，是因为倒数第二根的判断比较困难，打字的时候容易卡壳。</li>
+</ul>
+<p><a href="discussion.md">点击此处详细了解我对一款具有平衡性的输入法的一些思考和分析，以及宇浩输入法的设计理念和基本考量。</a></p>
+
+<p>這裏，我对宇浩输入法的基本规则进行简单介绍。如果你从未接触过形码输入法，可以从头开始一步一步学习。<a href="learn.md">点击此处阅读详细的《宇浩繁简通打输入法教程》。</a></p>
+
+<p>「宇浩」使用双编码字根，即每一个字根对应两个字母。第一个字母叫做<strong>大码</strong>，第二个字母叫做<strong>小码</strong>。字根大码，是按照字根第一笔的笔画来制定的。「宇浩」同五笔一样，字根按照笔画分区。</p>
+<ul>
+    <li>ASDFGH 包含了首笔为「横」的字根，例如：<code>A寸</code>
+        <code>F一</code>等。横区在键盘中排左侧。
+    </li>
+    <li>JKLNM 包含了首笔为「竖」的字根，例如：<code>J日</code>
+        <code>K上</code>等。竖区在键盘中下排右侧。
+    </li>
+    <li>QWERTY 包含了首笔为「撇」的字根，例如：<code>P竹</code>
+        <code>T人</code>等。撇区在键盘上排左侧。
+    </li>
+    <li>UIOP 包含了首笔为「捺」和「点」的字根，例如：<code>U言</code>
+        <code>I立</code>等。捺区在键盘上排右侧。
+    </li>
+    <li>BVCX 包含了首笔为「折」的字根，例如：<code>B刀</code>
+        <code>C巴</code>等。折区在键盘下排左侧。
+    </li>
+    <li>Z 键没有字根，可以用来反查拼音或做其他用途。</li>
+</ul>
+<p>字根的小码，都是尽量从它汉语拼音包含的字母中随机选取。如果拼音中有<code>Z</code>或<code>X</code>，那么可以选<code>K</code>来代替。字根表如下：</p>
+<table>
+    <colgroup>
+        <col style="width: 4%" />
+        <col style="width: 4%" />
+        <col style="width: 12%" />
+        <col style="width: 78%" />
+    </colgroup>
+    <thead>
+        <tr class="header">
+            <th style="text-align: left;">分區</th>
+            <th style="text-align: left;">大碼</th>
+            <th style="text-align: left;">代表字根v</th>
+            <th style="text-align: center;">字根</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="odd">
+            <td style="text-align: left;">橫</td>
+            <td style="text-align: left;">A</td>
+            <td style="text-align: left;">扌(㐄キヰ)</td>
+            <td style="text-align: center;">寸 c 丁 d 𡗗 e 亍 i 丌 j 丅 k 七 q 耳 r
+                {于下} u 瓦 w 弋 y</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">S</td>
+            <td style="text-align: left;">艹(龷卌卅廾{冓上})</td>
+            <td style="text-align: center;">犬 a 臣 c 而 e 厂 h 馬({馬上}) m 辰 n 丂
+                o 二(⺀冫ㄑ) r 𠂇 u</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">D</td>
+            <td style="text-align: left;">石(丆)</td>
+            <td style="text-align: center;">歹 d 丰 f 古 g 十 h 未 i 走 k 來 l
+                尤(尢) o 其 q 豕(𧰨) s 不 u 戊 w 西(覀) x 雨(⻗) y</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">F</td>
+            <td style="text-align: left;">木(朩)</td>
+            <td style="text-align: center;">三 a 爾 e 一(㇀) i 工 o 甫 u</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">G</td>
+            <td style="text-align: left;">王(⺩)</td>
+            <td style="text-align: center;">大 d 革 e 匚({畏下}𠥓匸) f 戈 g 面 i
+                車({專上}) j 酉 o 夫 u</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">H</td>
+            <td style="text-align: left;">土(耂)</td>
+            <td style="text-align: center;">長(镸髟) a 车 e 干 g 士({穀頭}) h 世 i
+                至 k 龶 n 末 o 示(⺬) s 兀 w 牙 y</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;">豎</td>
+            <td style="text-align: left;">J</td>
+            <td style="text-align: left;">日(𫩏)</td>
+            <td style="text-align: center;">山 a 曰 e 田 i 黽({龜下}) m 早 o</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">K</td>
+            <td style="text-align: left;">虫</td>
+            <td style="text-align: center;">甲 a 贝 b 电 d 申 e 水(氺) h 见 i
+                冂({雋下}) j 鹵 l 門 m 由 o 上(丄{丄、}) s 攴 u 禺 y</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">L</td>
+            <td style="text-align: left;">口({黽上})</td>
+            <td style="text-align: center;">{亞下}({亞中}) a 非 i 㗊 j</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">M</td>
+            <td style="text-align: left;">目</td>
+            <td style="text-align: center;">小(𡭔⺌𣥂) a 齒 c 刂 d 骨(⾻) g
+                虎(虍{虍上}) h 貝 i 巾 j 見 k 皿 n 卜({龍右}⺊{乍下}) o 且({具上}) q
+                丨(⼁) s 罒 w</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">N</td>
+            <td style="text-align: left;">足(⻊𧾷)</td>
+            <td style="text-align: center;">冊(𠕁) c 鬥 d 黑 e 龰 h 止 i
+                〢({四竖}〣) s 尚 s 咼(冎) u 囗 w</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;">撇</td>
+            <td style="text-align: left;">Q</td>
+            <td style="text-align: left;">竹({⺮右})</td>
+            <td style="text-align: center;">瓜 a 凡 f 殳 h 矢 i 几 j 僉 n 舟 o
+                丿(㇒) p 气 q 儿({荒下}) r 鱼 y</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">W</td>
+            <td style="text-align: left;">月(勹⺆{祭上}𱼀)</td>
+            <td style="text-align: center;">乂(𠂭) a 身 e 生 g 川 h 隹 i 牛(牜𠂒⺧)
+                n 缶 o 千 q 鬼({卑上}) u 𧘇 y</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">E</td>
+            <td style="text-align: left;">亻</td>
+            <td style="text-align: center;">白 b 长 g 夂(攵) h 斤(⺁) i 爪(⺥爫) k
+                壬(𡈼) n 夭 o 欠 q 烏({烏上}) u 乌 w</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">R</td>
+            <td style="text-align: left;">金(釒)</td>
+            <td style="text-align: center;">彳 c 舌 e 風 f 向({向框}{囟框}) g 禾 h
+                {微上} i 匕(𠤎) i 臼 j 夕 k 毛 m 犭 n 鳥({鳥上}) o 饣 s 入 u</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">T</td>
+            <td style="text-align: left;">片</td>
+            <td style="text-align: center;">卯({卬左}{乐上}) a 八({介下}) b 人 e
+                彡({癶右}{两撇}) i 钅 j 自 k 用 o 手(龵) u 魚 y</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">Y</td>
+            <td style="text-align: left;">心(忄)</td>
+            <td style="text-align: center;">鸟({鸟上}) a 合 e {爲下} i 豸 i 𠂤 i 九
+                j 冖(𠂊⺈) m 食(飠) s</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;">捺</td>
+            <td style="text-align: left;">U</td>
+            <td style="text-align: left;">言(訁)</td>
+            <td style="text-align: center;">丷(䒑ソ) a 羊(⺶) g 灬 i 礻 k 火 o 丬 q
+                广 u 亡({贏頭}) w</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">I</td>
+            <td style="text-align: left;">氵(ッ𠁼)</td>
+            <td style="text-align: center;">立 i 鹿({鹿上}) l</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">O</td>
+            <td style="text-align: left;">宀</td>
+            <td style="text-align: center;">讠 a 丶(⼂乀) d 方 g 户(戶) h 亥 i 之 k
+                亠 o 辛 x 〇(㇣) o</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">P</td>
+            <td style="text-align: left;">疒</td>
+            <td style="text-align: center;">麻 a 文 e 高({高上}) g 亦 i 衤 k 米 m 门
+                n 辶(⻎⻍) o 穴 u</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;">折</td>
+            <td style="text-align: left;">B</td>
+            <td style="text-align: left;">糸(糹)</td>
+            <td style="text-align: center;">刀 a 飛 e 子 i 己 j
+                母({互中}{母框}{毌框}) m {鼠下} s 尸(𠃜⼫) s 又(コス龴癶ュ) u</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">V</td>
+            <td style="text-align: left;">厶</td>
+            <td style="text-align: center;">乃 a 了 e 弓 g 巛(巜) h 乙(𠄎乜𠃌㔾⺂⺄)
+                i 艮 n 皮 p 纟({纟上}) s 已 y</td>
+        </tr>
+        <tr class="even">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">C</td>
+            <td style="text-align: left;">女</td>
+            <td style="text-align: center;">巴 a 也 e 阝 f 韋({五下}) i 幺 o 予
+                u</td>
+        </tr>
+        <tr class="odd">
+            <td style="text-align: left;"></td>
+            <td style="text-align: left;">X</td>
+            <td style="text-align: left;">彐(⺕)</td>
+            <td style="text-align: center;">马 a 屮(丩凵丱) c 爿 g 乚(𡿨𠃋𠃑𠄌) i 卩
+                j 力 l 廴 n 矛 o 巳 s 羽(习) u</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>宇浩输入法的单字编码取一、二、三、末根。这同五笔输入法相同，和郑码、徐码不同。单字编码规则如下：</p>
+<ol type="1">
+    <li>依次取一、二、三、未根大码。</li>
+    <li>不足四码时，补上未根小码。</li>
+    <li>仍然不足四码时，补上首根小码（如果小码是v则不用补）。</li>
+</ol>
+
+<p>从A到Y排列，一级简码字分别是<code>过那也不的一大地没是上中小回就这我得在个着了然出</code>。宇浩的字根设计，使得最高频的汉字分布在最容易按的键上，比如：「的」在<code>E</code>上，「一」在<code>F</code>上，「了」在<code>V</code>上，「没」在<code>I</code>上，「不」在<code>D</code>上，「上」在<code>K</code>上。
+</p>
+<p>二级简码字共625个，是该字全码的前两个字母。宇浩输入法<strong>全简一致</strong>。</p>
+
+<p>宇浩输入法<strong>字词编码一致</strong>。规则如下：</p>
+<ul>
+    <li>两字词，取每个字<strong>全码</strong>的前两码即可。</li>
+    <li>三字词，取前两字的第一码，和第三个字的前两码即可。</li>
+    <li>四字词及以上，取前三字的第一码，和最后一个字的第一码即可。</li>
+</ul>
