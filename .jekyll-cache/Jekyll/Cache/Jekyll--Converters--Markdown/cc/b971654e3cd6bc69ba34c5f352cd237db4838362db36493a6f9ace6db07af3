@@ -1,4 +1,4 @@
-I"��<h1>Table of Contents<span class="tocSkip"></span></h1>
+I"��<h1>Table of Contents<span class="tocSkip"></span></h1>
 <div class="toc"><ul class="toc-item"><li><span><a href="#手把手教你画数据地图之进阶篇" data-toc-modified-id="手把手教你画数据地图之进阶篇-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>手把手教你画数据地图之进阶篇</a></span><ul class="toc-item"><li><span><a href="#学习框架" data-toc-modified-id="学习框架-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>学习框架</a></span></li><li><span><a href="#数据地图的基本要素" data-toc-modified-id="数据地图的基本要素-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>数据地图的基本要素</a></span></li><li><span><a href="#Shapefile-和它的获取方式" data-toc-modified-id="Shapefile-和它的获取方式-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Shapefile 和它的获取方式</a></span></li></ul></li><li><span><a href="#GeoPandas-数据集" data-toc-modified-id="GeoPandas-数据集-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>GeoPandas 数据集</a></span></li><li><span><a href="#投影的选择" data-toc-modified-id="投影的选择-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>投影的选择</a></span></li><li><span><a href="#设置基本颜色" data-toc-modified-id="设置基本颜色-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>设置基本颜色</a></span></li><li><span><a href="#设置自定义的图例和刻度" data-toc-modified-id="设置自定义的图例和刻度-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>设置自定义的图例和刻度</a></span></li><li><span><a href="#色块上添加文本或数字" data-toc-modified-id="色块上添加文本或数字-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>色块上添加文本或数字</a></span></li><li><span><a href="#标题和备注的设置" data-toc-modified-id="标题和备注的设置-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>标题和备注的设置</a></span></li><li><span><a href="#结束语" data-toc-modified-id="结束语-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>结束语</a></span></li></ul></div>
 
 <p>Jupyter notebook at <br />
@@ -55,11 +55,11 @@ https://github.com/forFudan/DataMaps</p>
 
 <p>GADM 数据的优点是：方便下载、国家齐全、便于新人使用。它的缺点也很明显：对于每个国家的信息不够精确、更新不够迅速、有时候会有领土争议。打个比方，我们来看一下 GADM 的中国地图地市级行政区划的地理信息文件 (gadm36_CHN_2.shp)：</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="n">gpd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="p">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">'./gadm36_CHN_shp/gadm36_CHN_2.shp'</span><span class="p">)</span>
-<span class="n">gdf</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'lightblue'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s">"Incorrect Map of China on GADM"</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">geopandas</span> <span class="k">as</span> <span class="n">gpd</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="p">.</span><span class="nf">read_file</span><span class="p">(</span><span class="s">'./gadm36_CHN_shp/gadm36_CHN_2.shp'</span><span class="p">)</span>
+<span class="n">gdf</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'lightblue'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s">"Incorrect Map of China on GADM"</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
              <span class="n">xycoords</span><span class="o">=</span><span class="s">'figure fraction'</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s">'center'</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -76,17 +76,17 @@ https://github.com/forFudan/DataMaps</p>
 
 <p>我们接下来来介绍 GeoPandas 的基本的操作。关于这个包，我们在入门篇中已经稍微介绍过了。这里还是希望大家经常登录官方网站查阅官方的文档和教程。编程开始前，我们首先导入 geopandas, pandas, numpy, matplotlib 和 mapclassify。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="n">gpd</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">import</span> <span class="nn">mapclassify</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">geopandas</span> <span class="k">as</span> <span class="n">gpd</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">mapclassify</span>
 </code></pre></div></div>
 
 <p>然后使用 read_file() 这个命令来读取我们刚刚下载的地图文件（我把刚刚解压缩的文件夹放在了这个 Python 程序的同目录下），存为名为 china 的对象。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">china</span> <span class="o">=</span> <span class="n">gpd</span><span class="p">.</span><span class="n">read_file</span><span class="p">(</span><span class="s">'./gadm36_CHN_shp/gadm36_CHN_2.shp'</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">china</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">china</span> <span class="o">=</span> <span class="n">gpd</span><span class="p">.</span><span class="nf">read_file</span><span class="p">(</span><span class="s">'./gadm36_CHN_shp/gadm36_CHN_2.shp'</span><span class="p">)</span>
+<span class="nf">type</span><span class="p">(</span><span class="n">china</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>geopandas.geodataframe.GeoDataFrame
@@ -118,18 +118,18 @@ Name: 0, dtype: object
 
 <p>接下来，我们通过省的名字来选取出湖北省，并且保留中文市名和 geometry 两个变量，将它存为对象 hubei。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span> <span class="o">=</span> <span class="n">china</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">china</span><span class="p">.</span><span class="n">NAME_1</span><span class="p">.</span><span class="n">isin</span><span class="p">([</span><span class="s">'Hubei'</span><span class="p">]),</span> <span class="p">[</span><span class="s">'NL_NAME_2'</span><span class="p">,</span> <span class="s">'geometry'</span><span class="p">]]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span> <span class="o">=</span> <span class="n">china</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">china</span><span class="p">.</span><span class="n">NAME_1</span><span class="p">.</span><span class="nf">isin</span><span class="p">([</span><span class="s">'Hubei'</span><span class="p">]),</span> <span class="p">[</span><span class="s">'NL_NAME_2'</span><span class="p">,</span> <span class="s">'geometry'</span><span class="p">]]</span>
 <span class="n">hubei</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'name'</span><span class="p">,</span> <span class="s">'geometry'</span><span class="p">]</span>
 </code></pre></div></div>
 
 <p>我们稍微修正一下襄阳市名。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span> <span class="o">=</span> <span class="n">hubei</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'襄樊市'</span><span class="p">,</span> <span class="s">'襄阳市'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span> <span class="o">=</span> <span class="n">hubei</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="s">'襄樊市'</span><span class="p">,</span> <span class="s">'襄阳市'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>接下来，我们建立一个 DataFrame 表格叫做 df_number，它包含每个城市的疫情数据。然后我们将这个表格，根据城市名 name 合并到地图数据 hubei 中。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df_number</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s">'恩施土家族苗族自治州'</span><span class="p">,</span> <span class="s">'105'</span><span class="p">],</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df_number</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">([[</span><span class="s">'恩施土家族苗族自治州'</span><span class="p">,</span> <span class="s">'105'</span><span class="p">],</span>
                           <span class="p">[</span><span class="sa">u</span><span class="s">'鄂州市'</span><span class="p">,</span> <span class="mi">278</span><span class="p">],</span>
                           <span class="p">[</span><span class="sa">u</span><span class="s">'黄冈市'</span><span class="p">,</span> <span class="mi">1002</span><span class="p">],</span>
                           <span class="p">[</span><span class="sa">u</span><span class="s">'黄石市'</span><span class="p">,</span> <span class="mi">252</span><span class="p">],</span>
@@ -147,8 +147,8 @@ Name: 0, dtype: object
                           <span class="p">[</span><span class="sa">u</span><span class="s">'孝感市'</span><span class="p">,</span> <span class="mi">749</span><span class="p">],</span>
                           <span class="p">[</span><span class="sa">u</span><span class="s">'宜昌市'</span><span class="p">,</span> <span class="mi">353</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'name'</span><span class="p">,</span> <span class="s">'number'</span><span class="p">])</span>
 
-<span class="n">df_number</span><span class="p">[</span><span class="s">'number'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_number</span><span class="p">[</span><span class="s">'number'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">hubei</span> <span class="o">=</span> <span class="n">hubei</span><span class="p">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_number</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s">'name'</span><span class="p">)</span>
+<span class="n">df_number</span><span class="p">[</span><span class="s">'number'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_number</span><span class="p">[</span><span class="s">'number'</span><span class="p">].</span><span class="nf">map</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">hubei</span> <span class="o">=</span> <span class="n">hubei</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">df_number</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s">'name'</span><span class="p">)</span>
 
 <span class="n">hubei</span>
 </code></pre></div></div>
@@ -285,7 +285,7 @@ Name: 0, dtype: object
 
 <p>有了这三列数据（城市名称、城市形状、城市数据），我们就可以用 hubei 这个对象的 plot 方法画出基本地图轮廓了。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span><span class="p">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span><span class="p">.</span><span class="nf">plot</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p><img src="/img/posts/data_map_2/output_21_1.png" alt="png" /></p>
@@ -293,8 +293,8 @@ Name: 0, dtype: object
 <h1 id="投影的选择">投影的选择</h1>
 <p>我们可以从上图看到。这幅地图比较狭长。这是受到了数据默认的投影模式的影响。为了得到一个看起来比较“正常”的地图，我们需要修改投影的模式。这里我们使用我国的 CGCS2000 标准（epsg: 4508）。更改了投影模式之后，地图形状将会变得“正常”。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span> <span class="o">=</span> <span class="n">hubei</span><span class="p">.</span><span class="n">to_crs</span><span class="p">({</span><span class="s">'init'</span><span class="p">:</span> <span class="s">'epsg:4508'</span><span class="p">})</span>
-<span class="n">hubei</span><span class="p">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hubei</span> <span class="o">=</span> <span class="n">hubei</span><span class="p">.</span><span class="nf">to_crs</span><span class="p">({</span><span class="s">'init'</span><span class="p">:</span> <span class="s">'epsg:4508'</span><span class="p">})</span>
+<span class="n">hubei</span><span class="p">.</span><span class="nf">plot</span><span class="p">()</span>
 </code></pre></div></div>
 
 <p><img src="/img/posts/data_map_2/output_23_2.png" alt="png" /></p>
@@ -306,11 +306,11 @@ Name: 0, dtype: object
 
 <p>确定了颜色之后，我们就能使用入门篇中介绍的命令 plot() 来画地图了。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
 
-<span class="n">hubei</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span>
+<span class="n">hubei</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span>
     <span class="n">column</span><span class="o">=</span><span class="s">'number'</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'OrRd'</span><span class="p">,</span> <span class="n">scheme</span><span class="o">=</span><span class="s">'FisherJenks'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s">'0.5'</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">ax</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(208230.0234930166, 1033673.6030023085, 3193235.425809708, 3707752.693052896)
@@ -326,12 +326,12 @@ Name: 0, dtype: object
 <p>以下代码中，我们用图片使用的过度颜色 OrRd 生成了一个图例，并且根据hubei 表格中 number 这一列的数字的范围，建立对应的数字刻度。这里要注意，图例中数字刻度的 scale 使用的是 FisherJenks 分割方法，这个必须方法和之前画图的时候的选项一致。</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create colorbar as a legend
-</span><span class="n">sm</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="n">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s">'OrRd'</span><span class="p">)</span>
+</span><span class="n">sm</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="nc">ScalarMappable</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s">'OrRd'</span><span class="p">)</span>
 <span class="c1"># add the colorbar to the figure
-</span><span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span>
-<span class="n">bins</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="p">.</span><span class="n">FisherJenks</span><span class="p">(</span><span class="n">hubei</span><span class="p">[</span><span class="s">'number'</span><span class="p">],</span> <span class="mi">5</span><span class="p">).</span><span class="n">bins</span>
-<span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">cbar</span><span class="p">.</span><span class="n">ax</span><span class="p">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
+</span><span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="nf">colorbar</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="n">mapclassify</span><span class="p">.</span><span class="nc">FisherJenks</span><span class="p">(</span><span class="n">hubei</span><span class="p">[</span><span class="s">'number'</span><span class="p">],</span> <span class="mi">5</span><span class="p">).</span><span class="n">bins</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">bins</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">_</span> <span class="o">=</span> <span class="n">cbar</span><span class="p">.</span><span class="n">ax</span><span class="p">.</span><span class="nf">set_yticklabels</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
 
 <span class="n">fig</span>
 </code></pre></div></div>
@@ -347,16 +347,16 @@ Name: 0, dtype: object
 
 <p>注意，当我们要标注中文的话，需要进行预设。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">matplotlib.font_manager</span> <span class="kn">import</span> <span class="n">FontManager</span>
-<span class="n">fm</span> <span class="o">=</span> <span class="n">FontManager</span><span class="p">()</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">sys</span>
+<span class="kn">from</span> <span class="n">matplotlib.font_manager</span> <span class="kn">import</span> <span class="n">FontManager</span>
+<span class="n">fm</span> <span class="o">=</span> <span class="nc">FontManager</span><span class="p">()</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'font.sans-serif'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'SimHei'</span><span class="p">]</span>
 </code></pre></div></div>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">hubei</span><span class="p">.</span><span class="n">iterrows</span><span class="p">():</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">hubei</span><span class="p">.</span><span class="nf">iterrows</span><span class="p">():</span>
     <span class="n">xy</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'geometry'</span><span class="p">].</span><span class="n">centroid</span><span class="p">.</span><span class="n">coords</span><span class="p">[:]</span>
     <span class="n">xytext</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'geometry'</span><span class="p">].</span><span class="n">centroid</span><span class="p">.</span><span class="n">coords</span><span class="p">[:]</span>
-    <span class="n">ax</span><span class="p">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">'name'</span><span class="p">],</span> <span class="n">xy</span><span class="o">=</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xytext</span><span class="o">=</span><span class="n">xytext</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">ax</span><span class="p">.</span><span class="nf">annotate</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s">'name'</span><span class="p">],</span> <span class="n">xy</span><span class="o">=</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xytext</span><span class="o">=</span><span class="n">xytext</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
                  <span class="n">horizontalalignment</span><span class="o">=</span><span class="s">'center'</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s">'center'</span><span class="p">)</span>
 </code></pre></div></div>
 
@@ -368,9 +368,9 @@ Name: 0, dtype: object
 <h1 id="标题和备注的设置">标题和备注的设置</h1>
 <p>最后，我们可以用 Axes 的 set_title 和 annotate 方法给数据地图添加标题和备注。</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ax</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'2020年1月31日湖北省新冠状疫情累计病例数'</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ax</span><span class="p">.</span><span class="nf">set_title</span><span class="p">(</span><span class="s">'2020年1月31日湖北省新冠状疫情累计病例数'</span><span class="p">,</span> <span class="n">fontdict</span><span class="o">=</span><span class="p">{</span>
              <span class="s">'fontsize'</span><span class="p">:</span> <span class="s">'25'</span><span class="p">,</span> <span class="s">'fontweight'</span><span class="p">:</span> <span class="s">'1'</span><span class="p">})</span>
-<span class="n">ax</span><span class="p">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">'资料来源:  湖北省卫生健康委员会'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">.</span><span class="mi">12</span><span class="p">),</span>  <span class="n">xycoords</span><span class="o">=</span><span class="s">'figure fraction'</span><span class="p">,</span>
+<span class="n">ax</span><span class="p">.</span><span class="nf">annotate</span><span class="p">(</span><span class="s">'资料来源:  湖北省卫生健康委员会'</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="p">.</span><span class="mi">12</span><span class="p">),</span>  <span class="n">xycoords</span><span class="o">=</span><span class="s">'figure fraction'</span><span class="p">,</span>
             <span class="n">horizontalalignment</span><span class="o">=</span><span class="s">'left'</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s">'top'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#555555'</span><span class="p">)</span>
 <span class="n">fig</span>
 </code></pre></div></div>
